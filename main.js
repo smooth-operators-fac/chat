@@ -1,5 +1,4 @@
 
-var asked = false;
 var submit  = document.getElementById('submit').addEventListener('click', function(e){
  console.log('clicked');
 var inputText = document.getElementsByName('type something')[0].value;
@@ -12,17 +11,20 @@ if (rude){
   output = response('polite', inputText);
 }
 
-var userOutput = document.getElementById('output').appendChild("P");
-var t = document.createTextNode(inputText);
-outputP.appendChild(t);
+var userOutput = document.getElementById('output');
 
-var computerOutput = document.getElementById('output').appendChild("P");
-var t = document.createTextNode(output);
-outputP.appendChild(t);
+var newChild = document.createElement('p');
+var t = document.createTextNode(inputText);
+newChild.appendChild(t);
+userOutput.appendChild(newChild);	
+
+var secondChild = document.createElement('p');
+var t2 = document.createTextNode(output);
+secondChild.appendChild(t2);
+userOutput.appendChild(secondChild);
 
 
 });
-
 
 function response(personality, input){
 
