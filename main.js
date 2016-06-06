@@ -30,8 +30,16 @@ function response(personality, input){
 
 if(personality === 'rude'){
 
-if(asked === true){if(input === 'blue' || input === 'green' || input === 'yellow' || input === 'red'){return 'stupid choice';}
-else{return 'thats not a primary colour mate!'}}
+	if(asked === true){
+		if(input === 'blue' || input === 'green' || input === 'yellow' || input === 'red'){
+		asked = false;
+		return 'stupid choice';
+	}
+	else{
+		asked = false;
+		return 'thats not a primary colour mate!'
+	}
+}
 
 var randomResponse = Math.floor(Math.random()*10);
   if(randomResponse < 3){
@@ -57,8 +65,12 @@ var randomResponse = Math.floor(Math.random()*10);
 
 if(personality === 'polite'){
 
-if(asked === true){if(input === 'blue' || input === 'green' || input === 'yellow' || input === 'red'){return 'thats my favourite too!!';}
-else{return 'I regret to inform you thats not a primary colour.'}}
+	if(asked === true){if(input === 'blue' || input === 'green' || input === 'yellow' || input === 'red'){
+		asked = false;
+		return 'thats my favourite too!!';}
+	else{
+		asked = false;
+		return 'I regret to inform you thats not a primary colour.'}}
 
 var randomResponse = Math.floor(Math.random()*10);
   if(randomResponse < 3){
