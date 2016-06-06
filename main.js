@@ -1,4 +1,4 @@
-
+var asked = false;
 var submit  = document.getElementById('submit').addEventListener('click', function(e){
  console.log('clicked');
 var inputText = document.getElementsByName('type something')[0].value;
