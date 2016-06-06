@@ -1,8 +1,8 @@
 
-var submit  = document.getElementById('output').addEventListener('click', function(e){
+var submit  = document.getElementById('submit').addEventListener('click', function(e){
 
-var inputText = document.getElementById('input-text').value;
-var rude = document.getElementById('rude').checked;
+var inputText = document.getElementByName('type something').value;
+var rude = document.getElementByName('gender')[0].checked;
 var output = '';
 
 if (rude){
@@ -11,9 +11,14 @@ if (rude){
   output = response('polite', inputText);
 }
 
-var outputP = document.getElementById('output').appendChild("P");
+var userOutput = document.getElementById('output').appendChild("P");
+var t = document.createTextNode(inputText);
+outputP.appendChild(t);
+
+var computerOutput = document.getElementById('output').appendChild("P");
 var t = document.createTextNode(output);
 outputP.appendChild(t);
+
 
 });
 
