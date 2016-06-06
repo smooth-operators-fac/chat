@@ -1,4 +1,5 @@
 
+var asked = false;
 var submit  = document.getElementById('submit').addEventListener('click', function(e){
  console.log('clicked');
 var inputText = document.getElementsByName('type something')[0].value;
@@ -22,21 +23,53 @@ outputP.appendChild(t);
 
 });
 
+
 function response(personality, input){
 
 if(personality === 'rude'){
+
+if(asked === true){if(input === 'blue' || input === 'green' || input === 'yellow' || input === 'red'){return 'stupid choice';}
+else{return 'thats not a primary colour mate!'}}
+
 var randomResponse = Math.floor(Math.random()*10);
   if(randomResponse < 3){
-   var b = /\w+/.exec(input);
-   output = 'I hate people who start sentences with the word ' + b;
+  var b = /\w+/.exec(input);
+  return 'I hate people who start sentences with the word ' + '"' + b + '". Whats your favourite color?'; asked = true;
   }
   else if(randomResponse <6){
-   output = 'I dont care what you say, you are a moron';
+  var c = /\w+$/.exec(input);
+  return 'I dislike people who finish their sentences with the word ' + '"' + c + '"';
+  }
+  else if(randomResponse < 8){
+  return 'you should work on your vocabulary a bit. Whats your favourite colour?'; asked = true;
   }
   else{
-
+  return 'I dont care what you say, you are a moron';
   }
-	return output;
+
+}
+
+if(personality === 'polite'){
+
+if(asked === true){if(input === 'blue' || input === 'green' || input === 'yellow' || input === 'red'){return 'thats my favourite too!!';}
+else{return 'I regret to inform you thats not a primary colour.'}}
+
+var randomResponse = Math.floor(Math.random()*10);
+  if(randomResponse < 3){
+  var b = /\w+/.exec(input);
+  return 'I like people who start sentences with the word ' + '"' + b + '". Whats your favourite primary color?'; asked = true;
+  }
+  else if(randomResponse <6){
+  var c = /\w+$/.exec(input);
+  return 'I love people who finish their sentences with the word ' + '"' + c + '". Whats your favourite primary colour?';
+  }
+  else if(randomResponse < 8){
+  return 'Before you say anything, can I offer you a hot beverage?'; asked = true;
+  }
+  else{
+  return 'I dont care what you say, you are a moron';
+  }
+
 }
 
 }
