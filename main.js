@@ -41,6 +41,7 @@ var randomResponse = Math.floor(Math.random()*10);
   }
   else if(randomResponse <6){
   var c = /\w+$/.exec(input);
+  asked = false;
   return 'I dislike people who finish their sentences with the word ' + '"' + c + '"';
   }
   else if(randomResponse < 8){
@@ -48,6 +49,7 @@ var randomResponse = Math.floor(Math.random()*10);
   return 'you should work on your vocabulary a bit. Whats your favourite colour?';
   }
   else{
+	  asked = false;
   return 'I dont care what you say, you are a moron';
   }
 
@@ -66,6 +68,7 @@ var randomResponse = Math.floor(Math.random()*10);
   }
   else if(randomResponse <6){
   var c = /\w+$/.exec(input);
+  asked = false;
   return 'I love people who finish their sentences with the word ' + '"' + c + '". Whats your favourite primary colour?';
   }
   else if(randomResponse < 8){
@@ -73,6 +76,7 @@ var randomResponse = Math.floor(Math.random()*10);
   return 'Before you say anything, can I offer you a hot beverage?';
   }
   else{
+	  asked = false;
   return 'I dont care what you say, you are a moron';
   }
 
