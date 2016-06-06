@@ -35,15 +35,17 @@ else{return 'thats not a primary colour mate!'}}
 
 var randomResponse = Math.floor(Math.random()*10);
   if(randomResponse < 3){
-  var b = /\w+/.exec(input);
-  return 'I hate people who start sentences with the word ' + '"' + b + '". Whats your favourite color?'; asked = true;
+	  var b = /\w+/.exec(input);
+	  asked = true;
+  return 'I hate people who start sentences with the word ' + '"' + b + '". Whats your favourite color?';
   }
   else if(randomResponse <6){
   var c = /\w+$/.exec(input);
   return 'I dislike people who finish their sentences with the word ' + '"' + c + '"';
   }
   else if(randomResponse < 8){
-  return 'you should work on your vocabulary a bit. Whats your favourite colour?'; asked = true;
+	  asked = true;
+  return 'you should work on your vocabulary a bit. Whats your favourite colour?';
   }
   else{
   return 'I dont care what you say, you are a moron';
@@ -59,14 +61,16 @@ else{return 'I regret to inform you thats not a primary colour.'}}
 var randomResponse = Math.floor(Math.random()*10);
   if(randomResponse < 3){
   var b = /\w+/.exec(input);
-  return 'I like people who start sentences with the word ' + '"' + b + '". Whats your favourite primary color?'; asked = true;
+  asked = true;
+  return 'I like people who start sentences with the word ' + '"' + b + '". Whats your favourite primary color?';
   }
   else if(randomResponse <6){
   var c = /\w+$/.exec(input);
   return 'I love people who finish their sentences with the word ' + '"' + c + '". Whats your favourite primary colour?';
   }
   else if(randomResponse < 8){
-  return 'Before you say anything, can I offer you a hot beverage?'; asked = true;
+	  asked = true;
+  return 'Before you say anything, can I offer you a hot beverage?';
   }
   else{
   return 'I dont care what you say, you are a moron';
