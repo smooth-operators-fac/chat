@@ -10,8 +10,8 @@ if (rude){
   output = response('polite', inputText);
 }
 
-var outputP = document.getElementById('output').appendChild(p);
-
-outputP.value = output;
+var outputP = document.getElementById('output').appendChild("P");
+var t = document.createTextNode("This is a paragraph.");
+outputP.appendChild(t);
 
 });
