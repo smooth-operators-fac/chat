@@ -84,7 +84,7 @@ var randomResponse = Math.floor(Math.random()*10);
   return 'I love people who finish their sentences with the word ' + '"' + c + '". Whats your favourite primary colour?';
   }
   else if(randomResponse < 8){
-	  asked = true;
+	  asked = false;
   return 'Before you say anything, can I offer you a hot beverage?';
   }
   else{
