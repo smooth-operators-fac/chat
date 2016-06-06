@@ -1,8 +1,8 @@
 
 var submit  = document.getElementById('submit').addEventListener('click', function(e){
-
-var inputText = document.getElementByName('type something').value;
-var rude = document.getElementByName('gender')[0].checked;
+ console.log('clicked');
+var inputText = document.getElementsByName('type something')[0].value;
+var rude = document.getElementsByName('gender')[0].checked;
 var output = '';
 
 if (rude){
